@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 引用SWL功能 -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- fontawsome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/app.css">
+    <link rel="icon" href="./img/LogoMarker.png" type="image/x-icon">
+    <title>催便所</title>
+</head>
+
+<body>
+    <!-- 導覽列 -->
+    <div class="navdiv nav-container sticky-top">
+        <div class="container-fluid navBackground ">
+            <nav class="navbar navbar-light navbar-expand-sm ">
+                <li class=" logo ml-1" href="/"></li>
+                <li class="ml-1 h1">催便所</li>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav text-center">
+                        <li class="nav-item m-1 h2">
+                            <a class="nav-link text-dark" href="/">首頁</a>
+                        </li>
+                        <!-- <li class="nav-item m-1 h2 ">
+                            <a class="nav-link text-dark" href="#">線上客服</a>
+                        </li> -->
+                        <li class="nav-item m-1 h2 ">
+                            <a class="nav-link text-dark" href="/FAQ">常見問題</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!-- 地圖 -->
+    <div id="map"></div>
+
+    <!-- 搜尋塊 -->
+    <div id="search" class="search">
+        <div class="switchdiv">
+            <button id="switchbtn" class="switchbtn btn btn-primary float-right mt-1 mr-2 mb-1"></button>
+        </div>
+        <div>
+            <h3 class="w-100 mt-3 text-center">顯示廁所清單</h3>
+            <input type="checkbox" class="ml-1" style="zoom: 2;" name="toiletType" id="toiletType_convenienceStore"
+                value="" data-st1="統一" data-st2="全家" data-st3="萊爾富" data-st4="OK超商"
+                checked="checked" >
+            <label for="checkbox-1"> 便利商店</label><br>
+            <input type="checkbox" class="ml-1" style="zoom: 2;" name="toiletType" id="toiletType_cafe"
+                value=""  data-st1="星巴克" data-st2="路易莎"
+                checked="checked">
+            <label for="checkbox-2"> 咖啡廳</label><br>
+            <input type="checkbox" class="ml-1" style="zoom: 2;" name="toiletType" id="toiletType_fastFood"
+                value="" data-st1="麥當勞" data-st2="肯德基" data-st3="摩斯"
+                checked="checked">
+            <label for="checkbox-3"> 速食店</label><br>
+            <input type="checkbox" class="ml-1" style="zoom: 2;" name="toiletType" id="toiletType_gasStaion"
+                value="" data-st1="加油站"
+                checked="checked">
+            <label for="checkbox-4"> 加油站</label><br>
+            <input type="checkbox" class="ml-1" style="zoom: 2;" name="toiletType" id="toiletType_gov"
+                value="" data-st1="政府機關"
+                checked="checked">
+            <label for="checkbox-5"> 政府機關</label><br>
+            <input type="checkbox" class="ml-1" style="zoom: 2;" name="toiletType" id="toiletType_mrt"
+                value="" data-st1="捷運站"
+                checked="checked">
+            <label for="checkbox-6"> 捷運站</label><br>
+            <input type="checkbox" class="ml-1" style="zoom: 2;" name="toiletType" id="toiletType_department"
+                value="" data-st1="家樂福" data-st2="愛買" data-st3="大買家" data-st4="量販店" data-st5="百貨"
+                checked="checked">
+            <label for="checkbox-7"> 百貨 / 量販店</label><br>
+            <input type="checkbox" class="ml-1" style="zoom: 2;" name="toiletType" id="toiletType_BGToilet"
+                value="" data-st1="男女、無障礙、親子廁所" data-st2="男女、無障礙廁所" data-st3="男女、親子廁所" data-st4="男女廁所"
+                checked="checked">
+            <label for="checkbox-8"> 男 / 女廁所</label><br>
+            <input type="checkbox" class="ml-1" style="zoom: 2;" name="toiletType" id="toiletType_PSToilet"
+                value="" data-st1="男女、無障礙、親子廁所" data-st2="男女、親子廁所" data-st3="親子廁所"
+                checked="checked">
+            <label for="checkbox-9"> 親子廁所</label><br>
+            <input type="checkbox" class="ml-1" style="zoom: 2;" name="toiletType" id="toiletType_FRToilet"
+                value="" data-st1="男女、無障礙、親子廁所" data-st2="男女、無障礙廁所" data-st3="無障礙廁所"
+                checked="checked">
+            <label for="checkbox-10"> 無障礙廁所</label><br>
+            <div class="searchBtn ml-5">
+                <button class="btn btn-outline-primary btn-lg m-1 " onclick="showMarkers()" type="button">顯示</button>
+                <button class="btn btn-outline-danger btn-lg m-1" onclick="clearMarkers()" type="button">隱藏</button>
+            </div>
+        </div>
+    </div>
+    <!-- 尋找最近廁所的顯示按鈕 -->
+    <div class="position-relative">
+        <button class="btn btn-primary btn-lg position-absolute d-none" id="showNearbyToiletAgain">尋找最近廁所</button>
+    </div>
+    <!-- 顯示距離列表 -->
+    <div class="col-lg-4 float-right overflow-auto" id="showNearbyToilet" style="height: 84%;">
+        <div class="list-group" id="showLocation">
+
+        </div>
+    </div>
+    <!-- 使用說明 -->
+    <div id="myDescription" class="description">
+        <!-- Modal content -->
+        <div class="descriptionCcontent">
+            <div class="descriptionheader">
+                <h2 class="mt-2">使用說明</h2>
+            </div>
+            <div class="descriptionbody ">
+                <p class="mt-4">1.開啟定位</p>
+                <p>2.手動調整位置</p>
+                <p>3.選擇廁所</p>
+            </div>
+            <div class="descriptionfooter">
+                <button class="btn btn-outline-primary btn-lg ml-md-2 mb-4" id="getPos">開啟定位</button>
+            </div>
+        </div>
+    </div>
+    <!-- 對話盒 開始 -->
+    <!-- 跟之前用的 bootstrap 版本不同，這個網頁用的是 4.0.0 修改不同版本的色差-->
+    <div id="newsModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">問題回報</h2>
+                    <button type="button" class="close" style="font-size:40px" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="formReport">
+                        <div class="form-group">
+                            <h2 class="mb-3">回報事項</h2>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="cri1" name="cri" value="1" class="custom-control-input">
+                                <label class="custom-control-label h3" for="cri1">故障</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="cri2" name="cri" value="2" class="custom-control-input">
+                                <label class="custom-control-label h3" for="cri2">停用</label>
+                            </div>
+                            <h2 class="mb-3 mt-3">廁所類型</h2>
+                            <div class="input-group mb-3">
+                                <select class="custom-select" id="inputGroupSelect01" name="type">
+                                    <option value="1">男女廁</option>
+                                    <option value="2">無障礙廁所</option>
+                                    <option value="3">親子廁所</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <div class="pull-right">
+                        <!-- sweetalert id okButton -->
+                        <button type="button" id="submit" class="btn btn-success" data-toggle="modal"
+                            data-target="#newsModal">
+                            <span class="glyphicon glyphicon-ok"></span> 確定
+                        </button>
+                        <button type="button" id="cancelButton" class="btn btn-default" data-dismiss="modal">
+                            <span class="glyphicon glyphicon-remove"></span> 取消
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 對話盒 結束 -->
+
+
+    <!-- 連線地圖 -->
+    <script src="./javascript/connectMap.js"></script>
+    <!-- ModalBox -->
+    <script src="./javascript/app.js"></script>
+    <!-- 匯入地圖資料庫 -->
+    <script>
+        var markerData = JSON.parse('<%- JSON.stringify(renderData) %>');
+    </script>
+    <!-- 地圖相關 -->
+    <script src="./javascript/map.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+</body>
+
+</html>

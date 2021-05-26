@@ -1,0 +1,412 @@
+@charset "UTF-8";
+/* Optional: Makes the sample page fill the window. */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#map {
+  height: 83vh;
+  width: 100%;
+  position: absolute;
+  bottom: 1rem;
+  z-index: 1;
+}
+
+#body {
+  background-color: blanchedalmond;
+}
+
+@media screen and (max-width: 1000px) {
+  #map {
+    height: 100vh;
+    right: 0rem;
+    bottom: 0rem;
+    left: 0rem;
+  }
+}
+
+li {
+  padding: 0.5rem 1rem;
+  list-style-type: none;
+  margin-right: 1rem;
+}
+
+a {
+  font-size: 1.5rem;
+  color: black;
+  text-decoration: none;
+}
+
+.logo {
+  background-image: url(../img/LOGO.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 3rem;
+  width: 3rem;
+}
+
+.navBackground {
+  background-color: #fddb92;
+}
+
+@media (min-width: 768px) {
+  .nav-border {
+    border: 0;
+  }
+}
+
+#search {
+  display: block;
+  background-color: whitesmoke;
+  height: 83vh;
+  width: 20%;
+  position: absolute;
+  left: -18rem;
+  bottom: 1rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  font-size: 5vh;
+  z-index: 1;
+}
+
+.big-checkbox {
+  width: 30px;
+  height: 30px;
+}
+
+.switchdiv {
+  position: absolute;
+  z-index: 1;
+  top: 8px;
+  left: 100%;
+}
+
+.searchbtn {
+  text-align: center;
+}
+
+.switchbtn {
+  background-image: url(../img/LogoMarker.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 3rem;
+  width: 3rem;
+  z-index: 1;
+}
+
+.checkbox-xl .custom-control-label::before,
+.checkbox-xl .custom-control-label::after {
+  top: 1.2rem;
+  width: 2rem;
+  height: 2rem;
+}
+
+.checkbox-xl .custom-control-label {
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+@media only screen and (max-width: 2000px) {
+  #search {
+    background-color: whitesmoke;
+    height: 90vh;
+    position: fixed;
+    width: 15rem;
+    z-index: 2;
+    top: 5.4rem;
+    left: -15rem;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    padding-top: 1rem;
+    font-size: 4vh;
+  }
+}
+
+body {
+  background-color: blanchedalmond;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.logo {
+  background-image: url(../img/LOGO.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 3rem;
+  width: 3rem;
+}
+
+/* banner */
+.banner {
+  position: relative;
+}
+
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 999;
+}
+
+.banner-text > span {
+  font-size: 10vw;
+}
+
+.banner-img {
+  max-width: 100%;
+  height: 400px;
+}
+
+/* accordian */
+.card-header {
+  background-color: #c2e9fb;
+}
+
+.cardBodyBg {
+  background-color: #9fa09c;
+  color: white;
+}
+
+/* contact-box */
+.contact-box {
+  background-color: #fddb92;
+}
+
+/* svg {
+    width: 50px;
+    height: 50px;
+}
+
+
+#fb:hover {
+    fill: rgb(24, 119, 242);
+}
+
+#ig:hover {
+    fill: rgb(216, 46, 125);
+}
+
+#line:hover {
+    fill: rgb(1, 185, 1);
+}
+
+#twitter:hover {
+    fill: rgb(22, 162, 242)
+}
+
+/* footer */
+/* footer {
+    background-color: black;
+}
+
+footer>span {
+    color: blanchedalmond;
+} */
+/* back to top */
+#toTopBtn {
+  position: fixed;
+  bottom: 26px;
+  right: 39px;
+  z-index: 98;
+  padding: 21px;
+  background-color: rgba(232, 97, 84, 0.8);
+}
+
+.cd-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background: url(https://res.cloudinary.com/dxfq3iotg/image/upload/v1571057658/cd-top-arrow.svg) no-repeat center 50%;
+  background-color: rgba(232, 97, 84, 0.8);
+}
+
+/* 留言框大小 */
+#noteEdit textarea {
+  border: #ccc solid 1px;
+  width: 100%;
+  height: 200px;
+  resize: none;
+}
+
+/* 圖片縮小 */
+.comment .avatar {
+  display: block;
+  width: 35px;
+  height: 35px;
+  float: left;
+  margin: 0.2em 0 0;
+}
+
+#personIcon {
+  font-size: 28px;
+}
+
+/* 留言板標題背景白色 */
+.addcolor {
+  background-color: white;
+}
+
+/* 按鈕RWD後大小 */
+#Send_button {
+  width: 100%;
+  height: 100%;
+}
+
+/* 留言回覆上框線藍色!important */
+.addcolor2 {
+  border-top: #17a2b8 solid 2px !important;
+}
+
+/* 在style設定隱藏使用者圖片 */
+.disappear {
+  display: none;
+}
+
+/* 斷點 */
+@media (min-width: 768px) {
+  .nav-border {
+    border: 0;
+  }
+}
+
+.description {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 5;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+  font-size: 1rem;
+}
+
+/* Modal Content */
+.descriptionCcontent {
+  position: relative;
+  background-color: blanchedalmond;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  border-radius: 25px;
+  width: 30%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+  text-align: center;
+  font-size: 3rem;
+}
+
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.descriptionheader {
+  height: 11vh;
+  border-radius: 19px 19px 0 0;
+  padding: 2px 16px;
+  bottom: 1px;
+  background-color: #fddb92;
+  color: black;
+}
+
+.descriptionbody {
+  padding: 2px 16px;
+  min-height: 100%;
+}
+
+.descriptionfooter {
+  border-radius: 0 0 19px 19px;
+  position: relative;
+  top: 0px;
+  height: 11vh;
+  padding: 2px 16px;
+  background-color: #fddb92;
+  color: black;
+}
+
+@media only screen and (max-width: 1000px) {
+  .descriptionCcontent {
+    font-size: 2rem;
+    width: 50%;
+  }
+  .descriptionfooter {
+    padding: 10px 16px;
+  }
+}
+/*# sourceMappingURL=app.css.map */
+
+/* InfoWindow樣式 */
+.infoWindowStyle {
+  width: 250px;
+  background-color: #fafad2;
+  text-align: center;
+  border: 1px solid #888;
+  border-radius: 10px;
+}

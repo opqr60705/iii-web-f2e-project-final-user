@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/app.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <link rel="icon" href="./img/LogoMarker.png" type="image/x-icon">
+    <title>催便所</title>
+</head>
+
+<body>
+    <!-- Nav -->
+    <div class="navdiv nav-container sticky-top">
+        <div class="container-fluid navBackground ">
+            <nav class="navbar navbar-light navbar-expand-sm ">
+                <li class=" logo ml-1" href="/"></li>
+                <li class="ml-1 h1">催便所</li>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav text-center">
+                        <li class="nav-item m-1 h2">
+                            <a class="nav-link text-dark" href="/">首頁</a>
+                        </li>
+                        <!-- <li class="nav-item m-1 h2 ">
+                            <a class="nav-link text-dark" href="#">線上客服</a>
+                        </li> -->
+                        <li class="nav-item m-1 h2 ">
+                            <a class="nav-link text-dark" href="/FAQ">常見問題</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- banner -->
+
+    <div class="container banner mt-5">
+        <img class=" banner-img mx-auto d-block" src="img/sky.png">
+
+        <div class="banner-text col text-center">
+            <span class="font-weight-bold">FAQ</span>
+        </div>
+    </div>
+    <!-- 使用說明 -->
+    <div class="container mt-5" id="navBreadCrumb">
+        <ul class="nav nav-tabs justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link active h3" data-toggle="pill" href="#v-pills-Instructions">常見問題</a>
+            </li>
+
+        </ul>
+    </div>
+    <!-- 常見問題 -->
+    <div class="container">
+        <div class="row mt-5">
+            <!-- Accordion -->
+            <div class="tab-content col-12" id="v-pills-tabContent">
+                <div class="tab-pane fade show active" id="v-pills-Instructions" role="tabpanel"
+                    aria-labelledby="v-pills-Instructions-tab">
+                    <div id="accordion">
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link text-dark" data-toggle="collapse"
+                                        data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <div class="text-center text-break">
+                                            <div class="text-left">
+                                                <h3>網站緣起</h3>
+                                            </div>
+                                        </div>
+
+                                    </button>
+                                </h5>
+                            </div>
+
+                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
+                                data-parent="#accordion">
+                                <div class=" card-body cardBodyBg">
+                                    <h4>你/妳
+                                        是否有因為中午用餐吃過不新鮮的食物，導致在路上、行車中或者在陌生地，忽然想上廁所的經驗呢?大部分人的第一步驟通常都是打開GoogleMap搜尋廁所，但GoogleMap找到的都是屬於公共廁所的部分，有時候並沒有辦法完整納入加油站、便利商店、速食店等有提供廁所的地方。
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card ">
+                            <div class="card-header" id="headingTwo">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link text-dark " data-toggle="collapse"
+                                        data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        <div class="text-left text-break">
+                                            <h3>網站目的</h3>
+                                        </div>
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                data-parent="#accordion">
+                                <div class=" card-body cardBodyBg">
+                                    <h4>讓有內急的人可以快速的找到離自己最近的廁所，並依照自己的需求尋找廁所。</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card ">
+                            <div class="card-header" id="headingThree">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link text-dark " data-toggle="collapse"
+                                        data-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        <div class="text-left text-break">
+                                            <h3>誰是使用者?</h3>
+                                        </div>
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                data-parent="#accordion">
+                                <div class=" card-body cardBodyBg">
+                                    <h4>人有三急，不論男女老幼皆有需求，有急用者、賽事選手、想找超商或加油站的人、需要親子廁所或無障礙廁所等特殊需求的人。</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingFour">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link text-dark " data-toggle="collapse"
+                                        data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                        <div class="text-left text-break">
+                                            <h3>只是想上個廁所而已，有需要加入會員嗎?</h3>
+                                        </div>
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
+                                data-parent="#accordion">
+                                <div class=" card-body cardBodyBg">
+                                    <h4>不需要加入會員即可使用，如有任何問題可以至客服頁發問回報。</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingFive">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link text-dark " data-toggle="collapse"
+                                        data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                        <div class="text-left text-break">
+                                            <h3>顯示的廁所種類有哪些?</h3>
+                                        </div>
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseFive" class="collapse" aria-labelledby="headingFive"
+                                data-parent="#accordion">
+                                <div class=" card-body cardBodyBg">
+                                    <h4>包含男 / 女廁所、親子廁所、無障礙廁所。</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingSix">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link text-dark " data-toggle="collapse"
+                                        data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                        <div class="text-left text-break">
+                                            <h3>附近的廁所是否有包含無障礙廁所或親子廁所?</h3>
+                                        </div>
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseSix" class="collapse" aria-labelledby="headingSix"
+                                data-parent="#accordion">
+                                <div class=" card-body cardBodyBg">
+                                    <h4>有的，你/妳可以從首頁旁邊的搜尋列選擇相關選項，地圖會顯示相關鄰近廁所給你/妳。</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingSeven">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link text-dark " data-toggle="collapse"
+                                        data-target="#collapseSeven" aria-expanded="false"
+                                        aria-controls="collapseSeven">
+                                        <div class="text-left text-break">
+                                            <h3>過去後發現廁所不能用?</h3>
+                                        </div>
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven"
+                                data-parent="#accordion">
+                                <div class=" card-body cardBodyBg">
+                                    <h4>本網站屬於非營利性質網站，地圖上存在的廁所皆會標示，如果遇到故障、停用等問題，需要大家點擊廁所回報鈕後，才會進行修改。</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingEight">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link text-dark " data-toggle="collapse"
+                                        data-target="#collapseEight" aria-expanded="false"
+                                        aria-controls="collapseEight">
+                                        <div class="text-left text-break">
+                                            <h3>我看到前面有便利商店為什麼地圖沒有顯示有廁所?</h3>
+                                        </div>
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseEight" class="collapse" aria-labelledby="headingEight"
+                                data-parent="#accordion">
+                                <div class=" card-body cardBodyBg">
+                                    <h4>可能的原因如下，因為該商店並沒有廁所設施，或該廁所經過回報後已經為停用或故障的狀況，目前暫時沒有提供廁所。</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingNine">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link text-dark " data-toggle="collapse"
+                                        data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                                        <div class="text-left text-break">
+                                            <h3>在半夜的時候搜尋，過去時會發現店家關門嗎?</h3>
+                                        </div>
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseNine" class="collapse" aria-labelledby="headingNine"
+                                data-parent="#accordion">
+                                <div class=" card-body cardBodyBg">
+                                    <h4>我們會依照您定位的時間，顯示這時段還在營業且還有提供廁所服務的店家。</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- CSS的.addcolor2需要更改為下方-->
+    <!--.addcolor2 {background-color: white;  height: 30vh;} -->
+    <!-- 留言表單 -->
+    <form class="container-lg mt-5" method="POST">
+        <div class="card border p-2">
+            <div class="addcolor card-header text-info border-bottom border-info" id="messageBoard">
+                留言板
+            </div>
+            <!-- 版面內縮 -->
+            <div class="card-body" id="noteEdit">
+                <!--輸入框-->
+                <textarea id="opinion" name="note" placeholder="請輸入內容" name="message"></textarea>
+            </div>
+            <!--姓名表單(設定id回傳值)-->
+            <div class="input list-inline mt-3 container-fluid">
+                <div class="row">
+                    <div class="border border-dark  rounded mr-2 pr-0">
+                        <div class="list-inline-item">
+                            <p class="fa fa-user ml-2 pt-1" id="personIcon"></p>
+                        </div>
+                        <input id="access" type="text" placeholder="請輸入姓名"
+                            class="rounded pl-2 h-100 border-0 pr-0 list-inline-item" name="userName" />
+                    </div>
+                    <!-- 送出按鈕(設定id回傳值) -->
+                    <div class=" col-lg-auto p-0">
+                        <button id="Send_button" type="button" class="btn btn-info" onclick="send()">
+                            送出
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <% data.map((item,index)=> { %>
+        <% if((item.Id % 2 ) == 1){ %>
+        <div class="addcolor2 mt-3 p-2 container-lg rounded bg-dark text-light" id="textBox">
+        <% }else{ %>
+        <div class="addcolor2 mt-3 p-2 container-lg rounded" id="textBox">
+        <% } %>
+            <!-- 下列container設定防止跑圖   -->
+            <div id="first" class="container comment m-1 p-0">
+                <!-- 發文者 -->
+                <div class="border-info ">
+                    <!-- 此處回傳姓名、留言 -->
+                    <div class="container ml-2 mr-2  author ">
+                        <!-- 編號 -->
+                        <span class="text-info font-weight-bold h5">
+                            # <%= item.Id %>&emsp;
+                        </span>
+                        <!-- 姓名 -->
+                        <span id="Send_name">
+                            <span class="text-info ">名稱：</span>
+                            <%= item.Author %>&emsp;
+                        </span>
+                        <!-- 時間 -->
+                        <span id="hottime" class=" ml-3">
+                            <span class="text-info ">時間：</span>
+                            <%= item.Postingtime %>
+                        </span>
+                    </div>
+                    <hr id="textHr" class="border border-info">
+                    <div id="Send_content" class="messageText ml-2 container m-2 ">
+                        <%= item.Postcontent %>
+                    </div>
+                </div>
+                <% if(item.Replycontent !== ""){ %>
+                <!-- 管理者 -->
+                <div class="pt-3 border-top border-dark">
+                    <div class="container ml-2 mr-2  author ">
+                        <!-- 姓名 -->
+                        <span id="Send_name">
+                            <span class="text-info font-weight-bold">管理者&emsp;</span>
+                        </span>
+                        <!-- 姓名 -->
+                        <span id="Send_name">
+                            <span class="text-info">@<%= item.Author %></span>
+                            <%= item.Replycontent %>&emsp;
+                        </span>
+                        <!-- 時間 -->
+                        <span id="hottime" class=" ml-3">
+                            <span class="text-info ">時間：</span>
+                            <%= item.Replytime %>
+                        </span>
+                    </div>
+                </div>
+                <% } %>
+            </div>
+        </div>
+    <% }); %>
+    <!-- back to top -->
+    <a href="#" id="toTopBtn" class="cd-top"></a>
+    <script src="./javascript/FAQ.js"></script>
+    <script>
+        send = () => {
+            // console.log("ok")
+            // console.log($('#access').val());
+            // console.log($('#opinion').val());
+            $.ajax({
+                url: '/FAQ',
+                type: "POST",
+                data: {
+                    userName: $('#access').val(),
+                    message: $('#opinion').val()
+                }
+            })
+            location.replace(location.href)
+        }
+    </script>
+</body>
+
+</html>

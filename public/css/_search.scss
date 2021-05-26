@@ -1,0 +1,59 @@
+#search {
+  display: block;
+  background-color: whitesmoke;
+  height: 83vh;
+  width: 20%;
+  position: absolute;
+  left: -18rem;
+  bottom: 1rem;
+  // border: 1px solid black;
+  transition: 0.5s;
+  font-size: 5vh;
+  z-index: 1;
+}
+.big-checkbox {
+  width: 30px;
+  height: 30px;
+}
+.switchdiv {
+  position: absolute;
+  z-index: 1;
+  top: 8px;
+  left: 100%;
+}
+.searchbtn {
+  text-align: center;
+}
+.switchbtn {
+  background-image: url(../img/LogoMarker.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 3rem;
+  width: 3rem;
+  z-index: 1;
+}
+.checkbox-xl .custom-control-label::before,
+.checkbox-xl .custom-control-label::after {
+  top: 1.2rem;
+  width: 2rem;
+  height: 2rem;
+}
+.checkbox-xl .custom-control-label {
+  padding-top: 10px;
+  padding-left: 10px;
+}
+@media only screen and (max-width: 2000px) {
+  #search {
+    background-color: whitesmoke;
+    height: 90vh;
+    position: fixed;
+    width: 15rem;
+    z-index: 2;
+    top: 5.4rem;
+    left: -15rem;
+    transition: 0.5s;
+    padding-top: 1rem;
+    font-size: 4vh;
+  }
+}

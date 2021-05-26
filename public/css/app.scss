@@ -1,0 +1,31 @@
+/* Optional: Makes the sample page fill the window. */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#map {
+  height: 83vh;
+  width: 100%;
+  position: absolute;
+  bottom: 1rem;
+  z-index: 1;
+}
+#body {
+  background-color: blanchedalmond;
+}
+@media screen and (max-width: 1000px) {
+  #map {
+    height: 100vh;
+    right: 0rem;
+    bottom: 0rem;
+    left: 0rem;
+  }
+}
+@import "./nav";
+@import "./search";
+@import "./faq";
+@import "./description";
